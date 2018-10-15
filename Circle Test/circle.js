@@ -1,5 +1,5 @@
-(function(exports) {
-  function Circle() {
+(function() {
+  function Circle(exports) {
     this.radius = 10;
   };
 

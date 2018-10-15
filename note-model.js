@@ -1,4 +1,4 @@
-var MODULE = (function () {
+(function (exports) {
   function Notes(text) {
     this.note = text
   }
@@ -11,5 +11,5 @@ var MODULE = (function () {
     return this.note
   };
 
-  export.Notes = Notes;
-})();
+  exports.Notes = Notes;
+})(this);
