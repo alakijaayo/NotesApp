@@ -1,14 +1,18 @@
 (function(exports) {
   function testListModel() {
-    var notesListView = new NotesListView();
+    var notesList = new NotesList();
+    var notesListView = new NotesListView(notesList);
     assert.isTrue(notesListView.view instanceof NotesList)
     }
 
   function testHTMLReturn() {
-    var notesListView = new NotesListView();
-    notesListView.view.createAndStoreNote('ayo')
-    notesListView.view.createAndStoreNote('aidan')
+    var notesList = new NotesList();
+    notesList.createAndStoreNote('ayo')
+    notesList.createAndStoreNote('aidan')
+    console.log(notesList);
+    var notesListView = new NotesListView(notesList);
     var text = "<ul><li>ayo</li><li>aidan</li></ul>"
+    console.log(notesListView.htmlReturn());
     assert.isTrue(notesListView.htmlReturn() === text)
   }
 
