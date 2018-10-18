@@ -25,7 +25,7 @@
     var noteController = new NoteController(mockNotesList)
     noteController.insertNoteIntoHTML
     var element = document.getElementById('app')
-    assert.isTrue(element.innerHTML === "<ul><li>Favourite drink: Ribena</li></ul>")
+    assert.isTrue(element.innerHTML === "<ul><li>Favourite drink: Rib</li></ul>")
   };
 
 
