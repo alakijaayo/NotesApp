@@ -1,25 +1,24 @@
 // var element = document.getElementById("app")
 // console.log(element);
+//
+//
+// element.innerHTML = "Howdy";
 
-// var noteList = new NotesList()
-
-
-// element.innerHTML = notesListView.htmlReturn();
-// console.log("goodbye");
-
-
-
-(function (exports) {
-  function NoteController(noteList = new NotesList()) {
-    noteList.createAndStoreNote("Favourite drink: seltzer")
-    this.notesListView = new NotesListView(noteList)
+(function(exports) {
+  function NoteController(notesList = new NotesList()) {
+    this.notesList = notesList
+    this.notesList.createAndStoreNote("Favourite drink: Ribena")
+    this.notesListView = new NotesListView(notesList)
   }
 
   NoteController.prototype.insertNoteIntoHTML = function () {
-    var element = document.getElementById('app')
-    element.innerHTML = this.notesListView.htmlReturn();
+     var element = document.getElementById('app')
+     return element.innerHTML = this.notesListView.htmlReturn();
+   };
 
-  };
-  exports.NoteController = NoteController;
+   exports.NoteController = NoteController;
+})(this)
 
-})(this);
+var ayo = new NoteController()
+
+ayo.insertNoteIntoHTML()
