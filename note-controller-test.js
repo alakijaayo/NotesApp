@@ -9,7 +9,7 @@
   }
 
   MockListView.prototype.htmlReturn = function () {
-    return "<ul><li>Favourite drink: Ribena</li></ul>"
+    return "<ul><li><a href='#0'>Favourite drink: Ribena</a><li></ul>"
   };
 
   function MockNotesList() {
@@ -25,7 +25,7 @@
     var noteController = new NoteController(mockNotesList)
     noteController.insertNoteIntoHTML
     var element = document.getElementById('app')
-    assert.isTrue(element.innerHTML === "<ul><li>Favourite drink: Rib</li></ul>")
+    assert.isTrue(element.innerHTML === "<ul><li><a href='#0'>Favourite drink: Rib</a></li></ul>")
   };
 
 

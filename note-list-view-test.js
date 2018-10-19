@@ -10,7 +10,7 @@
     notesList.createAndStoreNote('Good Afternoon Marianne')
     notesList.createAndStoreNote('I Think your Alien T-shirt is...... pretty cool')
     var notesListView = new NotesListView(notesList);
-    var text = "<ul><li>Good Afternoon Maria</li><li>I Think your Alien T</li></ul>"
+    var text = "<ul><li><a href='#0'>Good Afternoon Maria</a></li><li><a href='#1'>I Think your Alien T</a></li></ul>"
     assert.isTrue(notesListView.htmlReturn() === text)
   }
 
